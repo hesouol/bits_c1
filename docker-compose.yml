@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  btc_mxn:
+    image: bitso
+    container_name: btc_mxn_container
+    volumes:
+      - ./book=btc_mxn:/home/bitso/book=btc_mxn
+    command: --book=btc_mxn
+    restart: unless-stopped
+
+  usd_mxn:
+    image: bitso
+    container_name: usd_mxn_container
+    volumes:
+      - ./book=usd_mxn:/home/bitso/book=usd_mxn
+    command: --book=usd_mxn
+    restart: unless-stopped
+
