@@ -10,7 +10,7 @@ import logging
 # Constants
 API_URL = "https://api.bitso.com/v3/order_book/"
 INTERVAL = 1  # in seconds
-SAVE_INTERVAL = 60  # Save every 60 records
+SAVE_INTERVAL = 6  # Save every 6 records, to run every 10 minutes change to 600
 
 # Spread thresholds for alerts
 SPREAD_THRESHOLDS = {

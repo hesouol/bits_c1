@@ -27,6 +27,7 @@ Run the commands below to stop:
     $ docker compose rm
 ~~~
 
+
 If you want to run it for one specific book, use the command below:
 The `--book` parameter must be provided. 
 ~~~bash
@@ -43,6 +44,7 @@ If you want to run the tests, run those in the root directory. Five tests must b
 
 About the Project
 ------------
+There are some sample records in the `output` folder.
 ```
 .
 ├── Dockerfile
@@ -50,6 +52,8 @@ About the Project
 ├── docker-compose.yml
 ├── pytest.ini
 ├── requirements.txt
+├── output
+│   └── book=*/*.csv 
 ├── src
 │   ├── __init__.py
 │   └── bitso_etl.py
@@ -73,7 +77,7 @@ Known issues
 2. Some parameters are hard coded to make the app easier to evaluate, that must be adjusted for production environment. 
 3. I'm using the sandbox api that doesn't require authentication, I was not able to register myself in Bitso. 
 4. I would like to get extra points by using Webhooks, but I didn't get exactly how to use them in this case. Have another app receiving the records and dumping them maybe?
-5. I adjusted the dump to run every 60 records, it's easier to see the files being written.
+5. I adjusted the dump to run every 6 records, it's easier to see the files being written.
 
 
 Final Thoughts
